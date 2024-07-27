@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ben - Full Stack Web Developer</title>
+    <title>Bryan - Full Stack Developer</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.min.js"></script>
 </head>
 <body>
     <div id="splash">
         <h1>Hello, I'm <span class="highlight">Bryan Zane</span>.</h1>
-        <p>I'm a full stack web developer.</p>
+        <p>I'm a full stack developer.</p>
         <button id="view-work">View my work ↓</button>
         <div id="animated-bg"></div>
     </div>
@@ -33,19 +33,46 @@
         </section>
 
         <section id="about">
-            <h2>About Me</h2>
-            <p>Here you can add information about your skills, experience, and background.</p>
+            <h2>About</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>As a dedicated full stack developer, I'm passionate about creating innovative web solutions. My journey in computer science, from Santa Fe State College to the University of Florida, has equipped me with a strong foundation in various programming languages and technologies. I thrive on challenges and continuously seek to expand my skills in both front-end and back-end development.</p>
+                </div>
+                <div class="skills-icons">
+                    <!-- Add icons for skills here -->
+                    <i class="fab fa-react" title="React"></i>
+                    <i class="fab fa-js-square" title="JavaScript"></i>
+                    <i class="fab fa-css3-alt" title="CSS"></i>
+                    <i class="fab fa-python" title="Python"></i>
+                    <i class="fab fa-node-js" title="Node.js"></i>
+                    <!-- Add more icons as needed -->
+                </div>
+            </div>
         </section>
 
         <section id="projects">
             <h2>My Projects</h2>
-            <!-- Add your projects here -->
+            <!-- Add projects here -->
         </section>
 
         <section id="contact">
-            <h2>Contact Me</h2>
-            <!-- Add your contact information or a contact form here -->
+            <h2>Contact</h2>
+            <p>Have a question or want to work together? Leave your details and I'll get back to you as soon as possible.</p>
+            <form id="contact-form">
+                <input type="text" id="name" name="name" placeholder="Name" required>
+                <input type="email" id="email" name="email" placeholder="Email" required>
+                <textarea id="message" name="message" placeholder="Message" required></textarea>
+                <button type="submit">SUBMIT</button>
+            </form>
         </section>
+        <footer>
+            <a href="https://github.com/yourusername" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="mailto:your.email@example.com"><i class="fas fa-envelope"></i></a>
+            <!-- Placeholders for LinkedIn and Instagram -->
+            <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+            <p>BRYAN ZANE SMITH ©2024</p>
+        </footer>
     </main>
 
     <script src="app.js"></script>
