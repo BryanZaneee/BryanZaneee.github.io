@@ -3,16 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bryan - Full Stack Developer</title>
+    <title>Bryan Zane Smith - Full Stack Developer</title>
     <link rel="stylesheet" href="style.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 </head>
 <body>
     <div id="splash">
-        <h1>Hello, I'm <span class="highlight">Bryan Zane</span>.</h1>
-        <p>I'm a full stack developer.</p>
-        <button id="view-work">View my work ↓</button>
         <div id="animated-bg"></div>
+        <div class="splash-content">
+            <h1>Hello, I'm <span class="highlight">Bryan Zane</span>.</h1>
+            <p>I'm a full stack web developer.</p>
+            <button id="view-work">View my work ↓</button>
+        </div>
     </div>
 
     <header>
@@ -27,54 +29,46 @@
     </header>
 
     <main>
-        <section id="home">
-            <h2>Welcome to My Portfolio</h2>
-            <p>Explore my projects and learn more about my skills as a full stack developer.</p>
-        </section>
-
         <section id="about">
             <h2>About</h2>
             <div class="about-content">
                 <div class="about-text">
-                    <p>As a dedicated full stack developer, I'm passionate about creating innovative web solutions. My journey in computer science, from Santa Fe State College to the University of Florida, has equipped me with a strong foundation in various programming languages and technologies. I thrive on challenges and continuously seek to expand my skills in both front-end and back-end development.</p>
+                    <p>Fully committed to the philosophy of life-long learning, I'm a full stack developer with a deep passion for JavaScript, React and all things web development. The unique combination of creativity, logic, technology and never running out of new things to discover, drives my passion and makes my work incredibly fulfilling.</p>
                 </div>
                 <div class="skills-icons">
-                    <!-- Add icons for skills here -->
-                    <i class="fab fa-react" title="React"></i>
-                    <i class="fab fa-js-square" title="JavaScript"></i>
-                    <i class="fab fa-css3-alt" title="CSS"></i>
-                    <i class="fab fa-python" title="Python"></i>
-                    <i class="fab fa-node-js" title="Node.js"></i>
-                    <!-- Add more icons as needed -->
+                    <!-- Add your skills icons here -->
                 </div>
             </div>
         </section>
 
         <section id="projects">
             <h2>My Projects</h2>
-            <!-- Add projects here -->
+            <!-- Add your projects here -->
         </section>
 
         <section id="contact">
             <h2>Contact</h2>
             <p>Have a question or want to work together? Leave your details and I'll get back to you as soon as possible.</p>
             <form id="contact-form">
-                <input type="text" id="name" name="name" placeholder="Name" required>
-                <input type="email" id="email" name="email" placeholder="Email" required>
-                <textarea id="message" name="message" placeholder="Message" required></textarea>
+                <input type="text" placeholder="Name" required>
+                <input type="email" placeholder="Email" required>
+                <textarea placeholder="Message" required></textarea>
                 <button type="submit">SUBMIT</button>
             </form>
         </section>
-        <footer>
-            <a href="https://github.com/yourusername" target="_blank"><i class="fab fa-github"></i></a>
-            <a href="mailto:your.email@example.com"><i class="fas fa-envelope"></i></a>
-            <!-- Placeholders for LinkedIn and Instagram -->
-            <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
-            <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
-            <p>BRYAN ZANE SMITH ©2024</p>
-        </footer>
     </main>
 
+    <footer>
+        <a href="https://github.com/yourusername" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="mailto:your.email@example.com"><i class="far fa-envelope"></i></a>
+        <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+        <p>BRYAN ZANE SMITH ©2024</p>
+    </footer>
+
+    <div class="scroll-to-top">↑</div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.min.js"></script>
     <script src="app.js"></script>
 </body>
 </html>

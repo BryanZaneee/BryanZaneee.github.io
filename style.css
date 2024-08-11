@@ -1,70 +1,61 @@
+/* Global Styles */
 body, html {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
     background-color: #111;
     color: #fff;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
-#splash {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    position: relative;
-    overflow: hidden;
-}
-
-#splash h1 {
-    font-size: 3rem;
-    margin-bottom: 0.5rem;
-    position: relative;
-}
-
-#splash p {
-    font-size: 1.5rem;
-    margin-bottom: 2rem;
-    position: relative;
-}
-
-#splash button {
+/* Element Styles */
+button {
     background-color: transparent;
     border: 2px solid #474BFF;
     color: #474BFF;
-    padding: 10px 20px;
-    font-size: 1rem;
     cursor: pointer;
+    font-size: 1rem;
+    padding: 10px 20px;
     transition: all 0.3s ease;
-    position: relative;
 }
 
-#splash button:hover {
+button:hover {
     background-color: #474BFF;
     color: #111;
 }
 
-header {
-    position: fixed;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    background-color: rgba(17, 17, 17, 0.8);
-    backdrop-filter: blur(5px);
-    transition: left 0.3s ease;
+footer {
+    background-color: #1f1f1f;
+    padding: 2rem;
+    text-align: center;
 }
 
-header.visible {
-    left: 0;
+footer a {
+    color: #fff;
+    font-size: 1.5rem;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+footer p {
+    color: #888;
+    font-size: 0.9rem;
+    margin-top: 1rem;
+}
+
+header {
+    background-color: rgba(34, 34, 34, 0.9);
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
 }
 
 nav ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
     display: flex;
     justify-content: flex-end;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
 }
 
 nav ul li {
@@ -82,46 +73,98 @@ nav ul li a:hover, nav ul li a.active {
 }
 
 main {
-    padding-top: 60px;
+    padding-top: 0;
 }
 
 section {
-    min-height: 100vh;
-    padding: 2rem;
+    align-items: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    min-height: 100vh;
+    padding: 4rem 2rem;
 }
 
-.highlight {
-    color: #474BFF;
-}
-
+/* ID Styles */
 #animated-bg {
+    height: 100%;
+    left: 0;
+    pointer-events: none;
     position: absolute;
     top: 0;
-    left: 0;
     width: 100%;
-    height: 100%;
-    pointer-events: none;
 }
 
-body, html {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    background-color: #111;
-    color: #fff;
-}
-
-/* New styles for contact form */
-#contact {
+#splash {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
     text-align: center;
 }
 
-#contact h2 {
+#splash h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+}
+
+#splash p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+#about {
+    background-color: #111;
+}
+
+#about h2 {
     font-size: 2.5rem;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+#about h2::after {
+    background-color: #474BFF;
+    bottom: -10px;
+    content: '';
+    height: 4px;
+    left: 50%;
+    position: absolute;
+    transform: translateX(-50%);
+    width: 50px;
+}
+
+.about-content {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    width: 100%;
+}
+
+.about-text {
+    flex: 1;
+    padding-right: 2rem;
+}
+
+.skills-icons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+/* Contact section styles */
+#contact {
+    text-align: center;
+    background-color: #111;
+    padding: 4rem 2rem;
+}
+
+#contact h2 {
+    font-size: 3rem;
     margin-bottom: 1rem;
 }
 
@@ -141,7 +184,7 @@ body, html {
 #contact-form textarea {
     background-color: #1f1f1f;
     border: none;
-    padding: 10px;
+    padding: 15px;
     margin-bottom: 1rem;
     color: #fff;
     font-size: 1rem;
@@ -178,8 +221,13 @@ footer {
 footer a {
     color: #fff;
     font-size: 1.5rem;
-    margin: 0 10px;
+    margin: 0 15px;
     text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #474BFF;
 }
 
 footer p {
@@ -188,23 +236,32 @@ footer p {
     color: #888;
 }
 
-/* Scroll to top button */
+/* Class Styles */
+.highlight {
+    color: #474BFF;
+}
+
 .scroll-to-top {
     background-color: #474BFF;
-    color: #fff;
-    width: 40px;
-    height: 40px;
-    text-align: center;
-    line-height: 40px;
-    font-size: 20px;
     border-radius: 5px;
-    position: fixed;
     bottom: 20px;
-    right: 20px;
+    color: #fff;
     cursor: pointer;
+    font-size: 20px;
+    height: 40px;
+    line-height: 40px;
+    position: fixed;
+    right: 20px;
+    text-align: center;
     transition: opacity 0.3s ease;
+    width: 40px;
 }
 
 .scroll-to-top:hover {
     opacity: 0.8;
+}
+
+.splash-content {
+    position: relative;
+    z-index: 1;
 }

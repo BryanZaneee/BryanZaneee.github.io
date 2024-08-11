@@ -4,7 +4,8 @@ let particles = [];
 function setup() {
     let canvas = createCanvas(windowWidth, windowHeight);
     canvas.parent('animated-bg');
-    for (let i = 0; i < 100; i++) {
+    // Increase the number of particles to fill the screen
+    for (let i = 0; i < 200; i++) {
         particles.push(new Particle());
     }
 }
@@ -66,40 +67,51 @@ document.addEventListener('DOMContentLoaded', function() {
     const splash = document.getElementById('splash');
     const viewWorkBtn = document.getElementById('view-work');
     const navLinks = document.querySelectorAll('nav ul li a');
+    const aboutSection = document.getElementById('about');
+
+    // Smooth scroll to sections when clicking nav links
+    navLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            const targetId = link.getAttribute('href');
+            const targetSection = document.querySelector(targetId);
+            const headerHeight = header.offsetHeight;
+            window.scrollTo({
+                top: targetId === '#home' ? 0 : targetSection.offsetTop - headerHeight,
+                behavior: 'smooth'
+            });
+        });
+    });
 
     viewWorkBtn.addEventListener('click', () => {
+        const headerHeight = header.offsetHeight;
         window.scrollTo({
-            top: splash.offsetHeight,
+            top: aboutSection.offsetTop - headerHeight,
             behavior: 'smooth'
         });
     });
 
-    function updateHeaderVisibility() {
-        if (window.scrollY > splash.offsetHeight - 100) {
-            header.classList.add('visible');
+    function updateActiveLink() {
+        const scrollPosition = window.scrollY;
+        const headerHeight = header.offsetHeight;
+
+        if (scrollPosition < splash.offsetHeight - headerHeight) {
+            setActiveLink('#home');
         } else {
-            header.classList.remove('visible');
+            document.querySelectorAll('section').forEach(section => {
+                if (scrollPosition >= section.offsetTop - headerHeight) {
+                    setActiveLink(`#${section.id}`);
+                }
+            });
         }
     }
 
-    function updateActiveLink() {
-        const scrollPosition = window.scrollY;
-
-        document.querySelectorAll('section').forEach(section => {
-            if (scrollPosition >= section.offsetTop - 100) {
-                const currentId = section.getAttribute('id');
-                navLinks.forEach(link => {
-                    link.classList.toggle('active', link.getAttribute('href') === `#${currentId}`);
-                });
-            }
+    function setActiveLink(id) {
+        navLinks.forEach(link => {
+            link.classList.toggle('active', link.getAttribute('href') === id);
         });
     }
 
-    window.addEventListener('scroll', () => {
-        updateHeaderVisibility();
-        updateActiveLink();
-    });
-
-    updateHeaderVisibility();
+    window.addEventListener('scroll', updateActiveLink);
     updateActiveLink();
 });
