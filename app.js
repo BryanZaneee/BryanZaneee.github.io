@@ -135,3 +135,62 @@ scrollToTopButton.addEventListener('click', () => {
         behavior: 'smooth'
     });
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    // Smooth scrolling for nav links
+    document.querySelectorAll('.nav-link').forEach(link => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            const targetId = link.getAttribute('href');
+            const targetSection = document.querySelector(targetId === '#home' ? '#splash' : targetId);
+            const headerHeight = document.querySelector('header').offsetHeight;
+            
+            window.scrollTo({
+                top: targetId === '#home' ? 0 : targetSection.offsetTop - headerHeight,
+                behavior: 'smooth'
+            });
+        });
+    });
+
+    // Update active nav link on scroll
+    function updateActiveNavLink() {
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('.nav-link');
+        const headerHeight = document.querySelector('header').offsetHeight;
+        const splash = document.querySelector('#splash');
+        
+        const scrollPosition = window.scrollY + headerHeight + 100;
+
+        // Check if we're in the splash/home section
+        if (scrollPosition < splash.offsetHeight) {
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === '#home') {
+                    link.classList.add('active');
+                }
+            });
+            return;
+        }
+
+        // Check other sections
+        sections.forEach(section => {
+            if (section.id === 'splash') return; // Skip splash section as it's handled above
+            
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.offsetHeight;
+            
+            if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href') === `#${section.id}`) {
+                        link.classList.add('active');
+                    }
+                });
+            }
+        });
+    }
+
+    // Add scroll event listener
+    window.addEventListener('scroll', updateActiveNavLink);
+    updateActiveNavLink(); // Initial call
+});
