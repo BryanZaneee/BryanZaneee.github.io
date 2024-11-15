@@ -409,3 +409,141 @@ footer p {
         font-size: 1.5rem;
     }
 }
+
+/* Project section styling */
+#projects {
+    padding: 6rem 2rem;
+    background-color: #111;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#projects h2 {
+    font-size: 2.5rem;
+    position: relative;
+    color: #fff;
+    margin-bottom: 4rem;
+    text-align: center;
+}
+
+.highlight-underline {
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(to right, #EC4899, #474BFF);
+}
+
+.projects-container {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    gap: 8rem;
+}
+
+.project-card {
+    width: 100%;
+    position: relative;
+}
+
+.project-content {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+}
+
+.project-card.reverse .project-content {
+    flex-direction: row-reverse;
+}
+
+.project-info {
+    flex: 1;
+}
+
+.project-info h3 {
+    font-size: 2rem;
+    color: #fff;
+    margin-bottom: 1rem;
+}
+
+.project-info p {
+    color: #ccc;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+.project-image {
+    flex: 1;
+    position: relative;
+}
+
+.project-image::before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    right: 20px;
+    bottom: 20px;
+    background-color: #474BFF;
+    z-index: 0;
+    border-radius: 8px;
+}
+
+.project-card.reverse .project-image::before {
+    left: 20px;
+    right: -20px;
+}
+
+.project-image img {
+    position: relative;
+    width: 100%;
+    border-radius: 8px;
+    z-index: 1;
+}
+
+.project-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.project-button {
+    padding: 0.75rem 1.5rem;
+    border: 2px solid #474BFF;
+    border-radius: 4px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.project-button:hover {
+    background-color: #474BFF;
+}
+
+@media (max-width: 768px) {
+    .project-content {
+        flex-direction: column-reverse;
+        gap: 2rem;
+    }
+
+    .project-card.reverse .project-content {
+        flex-direction: column-reverse;
+    }
+
+    .project-image::before {
+        top: -10px;
+        left: -10px;
+        right: 10px;
+        bottom: 10px;
+    }
+
+    .project-card.reverse .project-image::before {
+        left: -10px;
+        right: 10px;
+    }
+}
