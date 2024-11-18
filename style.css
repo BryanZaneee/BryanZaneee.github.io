@@ -480,6 +480,29 @@ footer p {
 .project-image {
     flex: 1;
     position: relative;
+    width: 100%;
+    max-width: 600px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.project-image:hover {
+    transform: scale(1.02);
+}
+
+.project-image img {
+    position: relative;
+    width: 100%;
+    height: auto; /* This allows the image to scale proportionally */
+    aspect-ratio: 16 / 10; /* Maintains a consistent aspect ratio */
+    object-fit: cover; /* Ensures the image covers the area without distortion */
+    border-radius: 8px;
+    z-index: 1;
+    transition: filter 0.3s ease;
+}
+
+.project-image:hover img {
+    filter: brightness(1.1);
 }
 
 .project-image::before {
@@ -497,13 +520,6 @@ footer p {
 .project-card.reverse .project-image::before {
     left: 20px;
     right: -20px;
-}
-
-.project-image img {
-    position: relative;
-    width: 100%;
-    border-radius: 8px;
-    z-index: 1;
 }
 
 .project-links {
@@ -586,6 +602,11 @@ footer p {
     object-fit: cover; /* Ensures the image covers the area without distortion */
     border-radius: 8px;
     z-index: 1;
+    transition: filter 0.3s ease;
+}
+
+.project-image:hover img {
+    filter: brightness(1.1);
 }
 
 @media (max-width: 1200px) {
