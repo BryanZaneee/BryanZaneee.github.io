@@ -673,3 +673,20 @@ footer p {
 .project-button i {
     margin-right: 0.5rem;
 }
+
+#contact h2 {
+    font-size: 2.5rem;
+    position: relative;
+    color: #fff;
+    margin-bottom: 4rem;
+    text-align: center;
+}
+
+.highlight-underline {
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(to right, #EC4899, #474BFF);
+}
