@@ -194,3 +194,62 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('scroll', updateActiveNavLink);
     updateActiveNavLink(); // Initial call
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    const modal = document.getElementById('modal');
+    const modalTitle = document.getElementById('modal-title');
+    const modalDescription = document.getElementById('modal-description');
+    const closeButton = document.querySelector('.close-button');
+
+    // Open modal when clicking Learn More
+    document.querySelectorAll('.learn-more').forEach(button => {
+        button.addEventListener('click', () => {
+            modalTitle.textContent = button.dataset.title;
+            modalDescription.textContent = button.dataset.description;
+            modal.classList.add('show');
+            document.body.style.overflow = 'hidden'; // Prevent scrolling
+        });
+    });
+
+    // Close modal when clicking the close button
+    closeButton.addEventListener('click', () => {
+        modal.classList.remove('show');
+        document.body.style.overflow = ''; // Restore scrolling
+    });
+
+    // Close modal when clicking outside
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+            modal.classList.remove('show');
+            document.body.style.overflow = ''; // Restore scrolling
+        }
+    });
+
+    // Close modal with Escape key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && modal.classList.contains('show')) {
+            modal.classList.remove('show');
+            document.body.style.overflow = ''; // Restore scrolling
+        }
+    });
+
+    document.getElementById('scroll-to-about').addEventListener('click', function() {
+        document.getElementById('about').scrollIntoView({ 
+            behavior: 'smooth' 
+        });
+    });
+
+    // Update scroll handler for "View my work" button
+    const scrollButton = document.getElementById('scroll-to-about');
+    if (scrollButton) {
+        scrollButton.addEventListener('click', () => {
+            const aboutSection = document.getElementById('about');
+            const headerHeight = document.querySelector('header').offsetHeight;
+            
+            window.scrollTo({
+                top: aboutSection.offsetTop - headerHeight,
+                behavior: 'smooth'
+            });
+        });
+    }
+});

@@ -12,15 +12,15 @@
         <div id="animated-bg"></div>
         <div class="splash-content">
             <h1>Hello, I'm <span class="highlight">Bryan Zane</span>.</h1>
-            <p>I'm a full stack developer.</p>
-            <button id="view-work">View my work ↓</button>
+            <p>I'm a full stack developer!</p>
+            <button id="scroll-to-about">View my work ↓</button>
         </div>
     </div>
 
     <header>
         <nav>
             <ul>
-                <li><a href="#home" class="nav-link active" >Home</a></li>
+                <li><a href="#home" class="nav-link active">Home</a></li>
                 <li><a href="#about" class="nav-link">About</a></li>
                 <li><a href="#projects" class="nav-link">Projects</a></li>
                 <li><a href="#contact" class="nav-link">Contact</a></li>
@@ -45,13 +45,12 @@
                 </div>
                 <h2>About<span class="highlight-underline"></span></h2>
             </div>
-        
+
             <p class="about-text">
-                I'm a Computer Science student at the University of Florida with a deep passion for full-stack development and AI. My expertise spans from front-end technologies like React and JavaScript to back-end solutions using C++, Python, and SQL. I am no stranger to creating innovative solutions to complex problems - from student debt management systems to traffic visualization tools. When I'm not programming, I enjoy surfing, gaming, staying active with fitness, playing piano, and pursuing self-improvement.
+                I'm a Computer Science student at the University of Florida with a strong passion for full-stack development and AI. My skill set includes front-end technologies like React and JavaScript, as well as back-end expertise in C++, Python, and SQL. I thrive on developing creative solutions to challenging problems, such as building student debt management platforms and traffic visualization tools. Outside of coding, I enjoy surfing, gaming, fitness, playing piano, and continuously striving for personal growth.
             </p>
-        
+
             <div class="skills-icons">
-                <!-- Front-End Section -->
                 <div class="skills-group">
                     <h3>Front-End</h3>
                     <div class="skills-grid">
@@ -73,8 +72,7 @@
                         </div>
                     </div>
                 </div>
-        
-                <!-- Back-End Section -->
+
                 <div class="skills-group">
                     <h3>Back-End</h3>
                     <div class="skills-grid">
@@ -96,8 +94,7 @@
                         </div>
                     </div>
                 </div>
-        
-                <!-- Tools Section -->
+
                 <div class="skills-group">
                     <h3>Tools</h3>
                     <div class="skills-grid">
@@ -126,28 +123,58 @@
                 <div class="project-card">
                     <div class="project-content">
                         <div class="project-info">
-                            <h3>Student Savers</h3>
-                            <p>A React based web application with Node.js and SQL tailored for managing student debt.</p>
+                            <h3>College Football Database</h3>
+                            <p>A React and .NET
+                                platform with Oracle for analyzing college football data.</p>
                             <div class="project-links">
-                                <a href="#" class="project-button">Live App</a>
-                                <a href="#" class="project-button">Learn More</a>
+                                <a href="https://github.com/BryanZaneee/CollegeFootballStats" target="_blank" class="project-button">Live App</a>
+                                <button class="project-button learn-more" 
+                                    data-title="College Football Database" 
+                                    data-description="Engineered a comprehensive college football analytics platform using React, .NET, and Oracle SQL. This full-stack application features dynamic data visualization dashboards, statistical analysis tools, and real-time performance tracking. Used, RESTful APIs, and Material-UI components to deliver intuitive user experiences.">
+                                    Learn More
+                                </button>
                             </div>
                         </div>
                         <div class="project-image">
-                            <img src="/api/placeholder/600/400" alt="Student Savers Project" />
+                            <img src="img/img1.png" alt="College Football Database" />
                         </div>
                     </div>
                 </div>
-        
+
                 <!-- Project 2 -->
                 <div class="project-card reverse">
+                    <div class="project-content">
+                        <div class="project-info">
+                            <h3>Pallas Academic Hub</h3>
+                            <p>A React and Go platform with PostgreSQL for academic collaboration and discussion.</p>
+                            <div class="project-links">
+                                <a href="https://github.com/BryanZaneee/Pallas-Academic-Hub" target="_blank" class="project-button">Live App</a>
+                                <button class="project-button learn-more" 
+                                    data-title="Pallas: Scientific Collaboration" 
+                                    data-description="A cutting-edge platform designed to facilitate academic collaboration and research sharing. Built with modern web technologies, featuring real-time collaboration tools and research management capabilities.">
+                                    Learn More
+                                </button>
+                            </div>
+                        </div>
+                        <div class="project-image">
+                            <img src="img/img2.png" alt="Pallas Project" />
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card">
                     <div class="project-content">
                         <div class="project-info">
                             <h3>Traffic Crash Heat Map</h3>
                             <p>A C++ program that generates a Heatmap visualization of car crashes in Gainesville.</p>
                             <div class="project-links">
-                                <a href="#" class="project-button">Live App</a>
-                                <a href="#" class="project-button">Learn More</a>
+                                <a href="https://github.com/BryanZaneee/HeatMaps" target="_blank" class="project-button">Live App</a>
+                                <button class="project-button learn-more" 
+                                    data-title="Traffic Crash Heat Map" 
+                                    data-description="An advanced C++ application that visualizes traffic accident patterns in Gainesville through heat map generation. Utilizes spatial data analysis and custom visualization algorithms.">
+                                    Learn More
+                                </button>
                             </div>
                         </div>
                         <div class="project-image">
@@ -155,39 +182,27 @@
                         </div>
                     </div>
                 </div>
-                <!-- Project 3 -->
-<div class="project-card">
-    <div class="project-content">
-        <div class="project-info">
-            <h3>College Football Database</h3>
-            <p>A comprehensive database system tracking college football statistics, teams, and player information using SQL for data analysis.</p>
-            <div class="project-links">
-                <a href="#" class="project-button">Live App</a>
-                <a href="#" class="project-button">Learn More</a>
-            </div>
-        </div>
-        <div class="project-image">
-            <img src="/api/placeholder/600/400" alt="College Football Database" />
-        </div>
-    </div>
-</div>
 
-<!-- Project 4 -->
-<div class="project-card reverse">
-    <div class="project-content">
-        <div class="project-info">
-            <h3>Pallas: Scientific Collaboration</h3>
-            <p>A platform facilitating scientific collaboration and research sharing, built with modern web technologies.</p>
-            <div class="project-links">
-                <a href="#" class="project-button">Live App</a>
-                <a href="#" class="project-button">Learn More</a>
-            </div>
-        </div>
-        <div class="project-image">
-            <img src="/api/placeholder/600/400" alt="Pallas Project" />
-        </div>
-    </div>
-</div>
+                <!-- Project 4 -->
+                <div class="project-card reverse">
+                    <div class="project-content">
+                        <div class="project-info">
+                            <h3>Debt-Managment App</h3>
+                            <p>Student Savers; A React based web application with Node.js and SQL tailored for managing student debt.</p>
+                            <div class="project-links">
+                                <a href="https://github.com/BryanZaneee/Student-Savers.git" target="_blank" class="project-button">Live App</a>
+                                <button class="project-button learn-more" 
+                                    data-title="Student Savers" 
+                                    data-description="A comprehensive debt management platform built with React, Node.js, and SQL, designed specifically for students. Features include debt tracking, payment planning, and financial analytics.">
+                                    Learn More
+                                </button>
+                            </div>
+                        </div>
+                        <div class="project-image">
+                            <img src="/api/placeholder/600/400" alt="Student Savers Project" />
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -212,6 +227,15 @@
     </footer>
 
     <div class="scroll-to-top">↑</div>
+
+    <!-- Modal -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h3 id="modal-title"></h3>
+            <p id="modal-description"></p>
+        </div>
+    </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.min.js"></script>
     <script src="app.js"></script>
