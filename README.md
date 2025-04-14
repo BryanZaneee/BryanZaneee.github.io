@@ -40,46 +40,14 @@ The project consists of three main files:
 
 ### Projects Section
 Features four main projects:
-1. Student Savers - Debt Management Application
-2. Traffic Crash Heat Map - Data Visualization
-3. College Football Database - Sports Analytics
-4. Pallas - Scientific Collaboration Platform
-
-Each project includes:
-- Project description
-- GitHub repository link
-- Detailed information modal
-- Visual preview
+1. Traffic Crash Heat Map - Data Visualization
+2. College Football Database - Sports Analytics
+3. Pallas - Scientific Collaboration Platform
 
 ### Contact Section
 - Professional contact form
 - Social media links
 - Email integration
-
-## Technical Features
-
-### CSS Implementation
-- Modern dark theme with accent colors (#474BFF)
-- Responsive grid layouts
-- Smooth transitions and animations
-- Interactive hover states
-- Modal implementations
-- Flexible image handling
-
-### JavaScript Functionality
-- Particle system animation with:
-  - Dynamic density adjustment
-  - Cursor interaction
-  - Section-based visibility
-- Smooth scrolling navigation
-- Active section highlighting
-- Modal system for project details
-- Scroll-to-top functionality
-
-### Local Development
-1. Clone the repository
-2. Open `index.html` in a web browser
-3. No build process required - pure HTML, CSS, and JavaScript
 
 ### Live Website
 Visit: [https://bryanzaneee.github.io/](https://bryanzaneee.github.io/)
@@ -88,8 +56,3 @@ Visit: [https://bryanzaneee.github.io/](https://bryanzaneee.github.io/)
 - Email: [bzane09@gmail.com](mailto:bzane09@gmail.com)
 - GitHub: [BryanZaneee](https://github.com/BryanZaneee)
 - LinkedIn: [Bryan Zane Smith](https://www.linkedin.com/in/bryan-zane-smith/)
-
-## Future Enhancements
-- Enhanced animation effects
-- Performance optimizations
-- Expanded interactive features
