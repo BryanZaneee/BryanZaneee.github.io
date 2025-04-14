@@ -153,6 +153,15 @@ section:not(#home) {
     padding-top: 6rem;
 }
 
+/* Exception for contact section - less vertical space */
+section#contact {
+    background-color: var(--primary-lightest);
+    color: var(--text-dark);
+    min-height: auto;
+    padding: 3rem 2rem 8rem 2rem;
+    justify-content: flex-start;
+}
+
 /* Home Section */
 #home {
     align-items: center;
@@ -238,6 +247,14 @@ section#about h2, section#projects h2, section#contact h2 {
 
 section#about h2 {
     color: #ffffff;
+}
+
+section#projects .profile-icon svg {
+    stroke: var(--text-dark);
+}
+
+section#contact .profile-icon svg {
+    stroke: var(--text-dark);
 }
 
 .highlight-underline {
@@ -467,15 +484,10 @@ section#projects .highlight-underline {
 }
 
 /* Contact Section */
-section#contact {
-    background-color: var(--primary-lightest);
-    color: var(--text-dark);
-    padding-top: 2rem;
-}
-
 section#contact h2 {
     color: var(--text-dark);
     margin-bottom: 1rem;
+    margin-top: 0;
 }
 
 section#contact .highlight-underline {
@@ -484,7 +496,7 @@ section#contact .highlight-underline {
 
 section#contact p {
     max-width: 600px;
-    margin: 0 auto 1.5rem;
+    margin: 0 auto 1rem;
     font-size: 1.2rem;
     color: var(--text-dark);
     position: relative;
@@ -494,7 +506,8 @@ section#contact p {
 #contact-form {
     display: flex;
     flex-direction: column;
-    max-width: 500px;
+    max-width: 450px;
+    width: 100%;
     margin: 0 auto;
     position: relative;
     z-index: 1;
@@ -505,8 +518,8 @@ section#contact p {
     background-color: rgba(255, 255, 255, 0.9);
     border: 2px solid var(--text-dark);
     border-radius: 0;
-    padding: 18px;
-    margin-bottom: 1.2rem;
+    padding: 16px;
+    margin-bottom: 1rem;
     color: var(--text-dark);
     font-size: 1.1rem;
     transition: all 0.3s ease;
@@ -520,7 +533,7 @@ section#contact p {
 }
 
 #contact-form textarea {
-    height: 150px;
+    height: 160px;
     resize: vertical;
 }
 
@@ -528,9 +541,9 @@ section#contact p {
     background-color: var(--primary-dark);
     border: 2px solid var(--primary-dark);
     color: #ffffff;
-    padding: 15px 30px;
-    font-size: 1.1rem;
-    margin-top: 1rem;
+    padding: 10px 20px;
+    font-size: 1rem;
+    margin-top: 0.5rem;
     font-weight: 600;
     cursor: pointer;
     transition: all 0.3s ease;
