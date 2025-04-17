@@ -73,37 +73,23 @@ class Particle {
     }
 
     display() {
-        // Create glassy particle effect with gradient and glow
+        // Draw stylistic flowing lines instead of bubbles
         push();
-        noStroke();
-        
-        // Adjust opacity for our particles with some transparency
-        const particleColor = color(
-            red(this.currentColor), 
-            green(this.currentColor), 
-            blue(this.currentColor), 
-            this.opacity * 100 // More transparent for glassy look
-        );
-        
-        // Draw the glow effect first (larger than actual particle)
-        const glowSize = this.size * 1.5;
-        let glowColor = color(
+        noFill();
+        stroke(
             red(this.currentColor),
             green(this.currentColor),
             blue(this.currentColor),
-            this.opacity * 30 * this.glowIntensity
+            this.opacity * 150
         );
-        fill(glowColor);
-        ellipse(this.position.x, this.position.y, glowSize);
-        
-        // Draw the particle body (glassy gradient handled via CSS classes)
-        fill(particleColor);
-        ellipse(this.position.x, this.position.y, this.size);
-        
-        // For the center highlight - small white dot
-        fill(255, 255, 255, this.opacity * 120);
-        ellipse(this.position.x - this.size/5, this.position.y - this.size/5, this.size * 0.3);
-        
+        strokeWeight(this.size / 4);
+        const angle = this.velocity.heading();
+        const len = this.size * 2;
+        const x1 = this.position.x + cos(angle) * len;
+        const y1 = this.position.y + sin(angle) * len;
+        const x2 = this.position.x - cos(angle) * len;
+        const y2 = this.position.y - sin(angle) * len;
+        line(x1, y1, x2, y2);
         pop();
     }
 
